@@ -1,5 +1,3 @@
-# Effectual_Intern_Test_Task
-
 # World Bank Macroeconomic Data Collection & Analysis
 
 ## Project Purpose
@@ -22,11 +20,7 @@ No countries, years, or indicators are hard-coded in the Python source code. To 
 ## Description of Outputs
 * **`main_dataset.csv`**: A wide-format dataset where each row represents a unique country and indicator combination. Missing values from the API are represented explicitly as blank/NaN. Each year within the configured time horizon is represented as a separate column (e.g., `year_2000`).
 * **`summary_table.csv`**: A compact analytical table showing one row per country. It details the industry and manufacturing value-added shares for the start and end years, alongside the Compound Annual Growth Rate (CAGR) for industry, manufacturing, and real GDP. 
-
-## Analytical Findings: Structural Change (2000-2025)
-An analysis of the collected data reveals clear signs of de-industrialization in several advanced economies, such as Australia, Canada, Belgium, and France. In these countries, both total industry and manufacturing value-added shares declined relative to GDP. Furthermore, manufacturing in these advanced economies is generally declining at a faster rate than the broader industry sector. For instance, Canada's manufacturing sector experienced a negative compound annual growth rate (CAGR) over the period, shrinking in absolute terms while its total industry continued to grow slightly. 
-
-In contrast, emerging economies present a vastly different structural trajectory. China maintained a robust and stable industry share of over 37% alongside exceptional GDP growth, indicating prolonged industrialization rather than a pivot away from manufacturing. Similarly, Turkiye saw its manufacturing share actually increase from 15.4% to 16.3%, highlighting the divergence in industrial trends between advanced and emerging markets.
+* **`analysis.md`**: A separate Markdown file containing a short interpretation answering the specific analytical questions regarding de-industrialization and structural trends.
 
 ## Assumptions and Limitations
 * **Handling Missing Current-Year Data:** Because the World Bank API has not yet released complete macroeconomic data for the year 2025 (returning `NaN` for all countries), the script is designed to dynamically identify and compute growth rates using the *latest available valid year* (e.g., 2023 or 2024) for each respective country, while maintaining the requested column names for the output format to satisfy downstream requirements.
